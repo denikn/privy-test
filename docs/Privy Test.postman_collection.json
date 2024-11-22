@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "a48b4a99-e9c7-475d-b363-56c0d52be892",
+		"name": "Privy Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3134681"
+	},
+	"item": [
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/macbook/Documents/keluargacemara.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Faces Count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "your_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/faces-count?filename=keluargacemara.jpeg",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"faces-count"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "keluargacemara.jpeg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Processed Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTk3NjMzNzYsInN1YiI6ImRlbmkifQ.4WwkYD7wkKyC9qTQ6B0Q5o3x_syyj0JNO88NvKl4Ty0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/processed-image?filename=keluargacemara.jpeg",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"processed-image"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "keluargacemara.jpeg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

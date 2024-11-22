@@ -1,0 +1,14 @@
+.idea
+.DS_Store
+.env
+
+cache/*
+!cache/.gitkeep
+
+bin/*
+!bin/.gitkeep
+
+uploads/*
+!uploads/.gitkeep
+
+go.sum
